@@ -1,0 +1,86 @@
+/* Variáveis de Cores */
+:root {
+    --primary-color: #2b5fba; /* Azul */
+    --secondary-color: #e6be2d; /* Dourado */
+    --overlay-color: rgba(0, 0, 0, 0.5); /* Cor do overlay */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Seção Hero */
+.hero-section {
+    height: 100vh; /* Cobre toda a altura da tela */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--overlay-color);
+    width: 100%;
+    height: 100%;
+}
+
+/* Título e Texto */
+.hero-section h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 64px;
+    letter-spacing: 3px;
+}
+
+.hero-section p {
+    font-size: 20px;
+}
+
+/* Estilo dos Botões */
+.btn-primary, .btn-warning {
+    background-color: var(--primary-color); /* Azul */
+    border-color: var(--primary-color);
+    border-radius: 25px;
+    padding: 10px 30px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: background-color 0.3s, transform 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efeito de hover nos botões */
+.btn-primary:hover, .btn-warning:hover {
+    background-color: rgba(43, 95, 186, 0.8); /* Azul mais suave no hover */
+    border-color: rgba(43, 95, 186, 0.8);
+    transform: scale(1.05); /* Aumenta o tamanho do botão quando passa o mouse */
+}
+
+/* Botão Dourado */
+.btn-warning {
+    background-color: var(--secondary-color); /* Dourado */
+    border-color: var(--secondary-color);
+}
+
+.btn-warning:hover {
+    background-color: rgba(230, 190, 45, 0.8); /* Dourado mais suave no hover */
+    border-color: rgba(230, 190, 45, 0.8);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 40px;
+    }
+
+    .hero-section p {
+        font-size: 16px;
+    }
+
+    .btn-lg {
+        font-size: 16px;
+    }
+}
